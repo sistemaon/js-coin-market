@@ -1,0 +1,37 @@
+{
+  "name": "js-coin-market",
+  "version": "0.0.1",
+  "description": "fetch, cryptocoin",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint api/**/*.js",
+    "test": "nyc mocha api/**/*.js",
+    "precommit": "npm run lint"
+  },
+  "nyc": {
+    "lines": 80,
+    "functions": 80,
+    "reporter": [
+      "html"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sistemaon/js-coin-market.git"
+  },
+  "author": "Erni Souza <erni.augusto@gmail.com> (https://github.com/sistemaon)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sistemaon/js-coin-market/issues"
+  },
+  "homepage": "https://github.com/sistemaon/js-coin-market#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.0.1",
+    "nyc": "^11.4.1"
+  }
+}
