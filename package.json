@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint api/**/*.js",
-    "test": "nyc mocha api/**/*.js",
+    "test:tdd": "./node_modules/mocha/bin/mocha tests/*.spec.js --require babel-register",
+    "test:coverage": "nyc mocha api/**/*.js",
     "precommit": "npm run lint"
+  },
+  "babel": {
+    "presets": ["env"]
   },
   "nyc": {
     "lines": 80,
@@ -26,6 +30,8 @@
   },
   "homepage": "https://github.com/sistemaon/js-coin-market#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
